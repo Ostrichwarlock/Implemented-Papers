@@ -10,17 +10,11 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardi
 from utils import *
 from skip_gram import SkipGram
 from dataset import TextDataset
+from hyperparameters import BATCH_SIZE, CONTEXT_SIZE, D_MODEL, N_EPOCHS, LEARNING_RATE, TRAIN
 
 def main():
-    # Set Hyperparameters
     script_dir = os.path.dirname(os.path.abspath(__file__))
     DATA_PATH = os.path.join(script_dir, "..", "data", "Articles")
-    BATCH_SIZE = 64
-    CONTEXT_SIZE = 6
-    D_MODEL = 512
-    N_EPOCHS = 10
-    LEARNING_RATE = 0.0001
-    TRAIN = False
     DEVICE = torch.device("cuda" if torch.cuda.is_available() else "mps" if torch.backends.mps.is_available() else "cpu")
 
     # Load the Data

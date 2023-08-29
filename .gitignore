@@ -1,2 +1,5 @@
 .DS_Store
 NLP/Word2Vec/data
+NLP/Word2Vec/SkipGram/__pycache__/
+NLP/Word2Vec/__pycache__/
+NLP/Word2Vec/CBOW/__pycache__/
